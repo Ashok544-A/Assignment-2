@@ -1,4 +1,4 @@
 FROM python:3.11-slim
-WORKDIR /
-COPY app.py swe.py
+WORKDIR /app
+COPY app.py .
 CMD ["python","app.py"]
