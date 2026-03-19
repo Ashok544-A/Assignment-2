@@ -10,7 +10,7 @@ jobs:
 
       - name: build docker image
         run: |
-          docker build -t hello-python /app  #creating my docker image as hellp-python
+          docker build -t hello-python Dokerfile  #creating my docker image as hellp-python
       - name: run docker container
         run: |
           docker run hello-python #running container with doc img.so default containar name it will take.
