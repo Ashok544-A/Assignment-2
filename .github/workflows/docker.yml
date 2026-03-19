@@ -1,7 +1,7 @@
 name: docker hello world
 on: push
 jobs:
-  run-docker:
+  my-job:
     runs-on: ubuntu-latest
 
     steps:
