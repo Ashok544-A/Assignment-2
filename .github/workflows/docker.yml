@@ -13,5 +13,5 @@ jobs:
           docker build -t hello-python .  #creating my docker image as hellp-python
       - name: run docker container
         run: |
-          docker run hello-python 
+          docker run hello-python #running container with doc img.so default containar name it will take.
     
