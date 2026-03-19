@@ -1,0 +1,17 @@
+name: docker hello world
+on: push
+jobs:
+  run-docker:
+    runs-on: ubuntu-latest
+
+  steps:
+      - name: checkout repository
+       uses: actions/checkout@v4
+
+      - name: build docker image
+        run: |
+          docker build -t hello-python
+      - name: run docker container
+        run: |
+          docker run hello-python
+    
