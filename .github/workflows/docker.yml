@@ -4,7 +4,7 @@ jobs:
   run-docker:
     runs-on: ubuntu-latest
 
-  steps:
+    steps:
       - name: checkout repository
        uses: actions/checkout@v4
 
