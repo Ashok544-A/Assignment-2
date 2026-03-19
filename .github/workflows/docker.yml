@@ -13,5 +13,5 @@ jobs:
           docker build -t hello-python
       - name: run docker container
         run: |
-          docker run hello-python .
+          docker run hello-python /Dockerfile
     
