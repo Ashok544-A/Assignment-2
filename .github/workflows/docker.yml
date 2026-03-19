@@ -10,8 +10,8 @@ jobs:
 
       - name: build docker image
         run: |
-          docker build -t hello-python
+          docker build -t hello-python .
       - name: run docker container
         run: |
-          docker run hello-python /Dockerfile
+          docker run hello-python 
     
