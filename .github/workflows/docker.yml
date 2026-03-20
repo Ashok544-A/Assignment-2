@@ -13,6 +13,7 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscriptionId: "dd5c5f7b-47a5-4145-b73f-2839a9a8f4b1"
       - name: azure login
         run: |
           az acr login --name demo38
