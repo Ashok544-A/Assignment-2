@@ -10,8 +10,8 @@ jobs:
       - name: login azure
         uses: azure/login@v1
         with:
-          clinet-id: ${{ secrets.AZURE_CLIENT_ID }}
-          clinet-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
       - name: azure login
         run: |
