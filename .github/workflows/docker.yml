@@ -11,8 +11,9 @@ jobs:
         uses: azure/docker-login@v1
         with:
           login-server: ${{ secrets.ACR_LOGIN_SERVER }}
-          username: ${{ secrets.ACR_USERNAME }}
-          password: ${{ secrets.ACR_PASSWORD }}
+          clinet-id: ${{ secrets.AZURE_CLINET_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          clinet-secret: ${{ secrets.AZURE_CLINET_SECRET }}
       - name: build docker image
         run: |
           docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/hello-python:latest .  #creating my docker image as hellp-python
