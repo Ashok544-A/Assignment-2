@@ -10,15 +10,18 @@ jobs:
       - name: login azure
         uses: azure/login@v1
         with:
-          login-server: ${{ secrets.ACR_LOGIN_SERVER }}
           clinet-id: ${{ secrets.AZURE_CLINET_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           clinet-secret: ${{ secrets.AZURE_CLINET_SECRET }}
+      - name: azure login
+        run: |
+          az acr login --name demo38
+        
       - name: build docker image
         run: |
-          docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/hello-python:latest .  #creating my docker image as hellp-python
+          docker build -t demo38.azurecr.io/hello-python:latest .  #creating my docker image as hellp-python
       
       - name: push docker img to acr
         run: |
-          docker push ${{ secrets.ACR_LOGIN_SERVER }}/hello-python:latest
+          docker push demo38.azurecr.io/hello-python:latest
     
