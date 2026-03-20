@@ -16,11 +16,11 @@ jobs:
           password: ${{ secrets.ACR_PASSWORD }}
       - name: build docker image
         run: |
-          docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/hello-python:latest .  #creating my docker image as hellp-python
+          docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/hello-python .  #creating my docker image as hellp-python
       - name: run docker container
         run: |
           docker run hello-python #running container with doc img.so default containar name it will take.
       - name: push docker img to acr
         run: |
-          docker push ${{ secrets.ACR_LOGIN_SERVER }}/hello-python:latest
+          docker push ${{ secrets.ACR_LOGIN_SERVER }}/hello-python
     
